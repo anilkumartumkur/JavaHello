@@ -24,7 +24,7 @@ jobs:
             python-version: 3.9
         - name: python dependenceies
           run: |
-            python -m install pip --upgrade pip
+            python -m pip install  --upgrade pip
             pip install pytest
         - name: Run testcase
           run: pytest
