@@ -2,7 +2,7 @@ name: Hello world
 on: 
 push:
 branches:
--main
+-master
 
 jobs:
 first-hello-world-job:
