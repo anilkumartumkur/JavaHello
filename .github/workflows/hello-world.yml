@@ -6,7 +6,7 @@ on:
 
 jobs:
   firs-hello-world-job:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: checkout code
         uses: actions/checkout@v3
@@ -14,7 +14,7 @@ jobs:
         run: echo "Hello wordls tested"
        
   run-python:
-   runs-on: self-hosted
+   runs-on: ubuntu-latest
   
    strategy:
       matrix:
