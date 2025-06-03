@@ -1,6 +1,6 @@
 name: Docker images
 on:
-  push:
+  push: 
    branches: 
     - masterru
 
