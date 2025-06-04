@@ -19,5 +19,5 @@ jobs:
       uses: docker/build-push-action@v3
       with:
        push: true
-       tag: anilkumar1146/workflow:latest
+       tag: anilkumar1146/Dockerimage:latest
     
