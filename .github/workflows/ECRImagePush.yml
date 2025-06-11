@@ -15,6 +15,7 @@ jobs:
        with:
         distribution: 'temurin'
         java-version: '17'
-        cache: maven     
+     - name: Install Java Dependices
+       run: sudo apt install maven -y
      - name: build binary code
        run: mvn clean install
