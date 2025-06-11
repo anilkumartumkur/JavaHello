@@ -20,7 +20,7 @@ jobs:
        with: 
         access_key_id: ${{ secret.KEY_ID }}
         access_secret_token: ${{ secret.TOEKN }}
-        access_secret_region: 'apt-east-1'
+        access_region: 'ap-south-1'
      - name: Login to aws registry  
        uses: aws-actions/amazon-aws-login@v4
      - name: Install Java Dependices
