@@ -22,7 +22,7 @@ jobs:
         access_secret_token: ${{ secrets.TOEKN }}
         access_region: 'ap-south-1'
      - name: Login to aws registry  
-       uses: aws-actions/amazon-ecr-login@v4
+       uses: aws-actions/amazon-ecr-login@v2
      - name: Install Java Dependices
        run: sudo apt update && sudo apt install maven -y
      - name: build binary code
