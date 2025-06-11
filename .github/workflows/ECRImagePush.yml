@@ -15,7 +15,22 @@ jobs:
        with:
         distribution: 'temurin'
         java-version: '17'
+     - name: Configure the Aws-cli
+       uses: aws-actions/configure-aws-credentails@v3
+       with: 
+        access_key_id: ${{ secret.KEY_ID }}
+        access_secret_token: ${{ secret.TOEKN }}
+        access_secret_region: 'apt-east-1'
+     - name: Login to aws registry  
+       uses: aws-actions/amazon-aws-login@v4
      - name: Install Java Dependices
        run: sudo apt update && sudo apt install maven -y
      - name: build binary code
        run: mvn clean install
+     - name: Docker build and push
+       uses: docker/build-push-actions@v3
+       with:
+        context: .
+        push: true
+        file: ./Dockerfile
+        tag: githubaction:latest public.ecr.aws/j8p4c8m8/githubaction:1.0
